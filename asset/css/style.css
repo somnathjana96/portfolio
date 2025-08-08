@@ -1,0 +1,1323 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+}
+
+::selection {
+    color: #000;
+    background-color: #ffb668;
+}
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(255, 240, 220);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc586;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+.somnath_header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+
+}
+
+.somnath_header .container {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+    transition: 0.3s all ease;
+    border-radius: 10px;
+
+}
+
+
+.somnath_header .container .inside_header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.somnath_header .container .inside_header a {
+    text-decoration: none;
+}
+
+.somnath_header .container .inside_header .logo-name {
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.somnath_header .container .inside_header .logo-name .circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    transform: skewy(-10deg);
+    background-color: #ff8400;
+    position: absolute;
+}
+
+.somnath_header .container .inside_header .logo-name .name {
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 999;
+    padding-left: 10px;
+    color: #000;
+}
+
+.somnath_header .container .inside_header .navbar {
+    width: auto;
+    height: 100%;
+}
+
+.somnath_header .container .inside_header .navbar ul {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.somnath_header .container .inside_header .navbar ul li {
+    list-style: none;
+    width: 86px;
+    height: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.somnath_header .container .inside_header .navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+
+    transition: 0.4s all ease;
+}
+
+.somnath_header .container .inside_header .navbar ul li:hover a {
+    color: #ff8400;
+    transition: 0.4s all ease;
+
+}
+
+.somnath_header .container .inside_header .navbar ul li::before,
+.somnath_header .container .inside_header .navbar ul li::after {
+    content: "";
+    position: absolute;
+
+    height: 1px;
+    width: 0;
+    background-color: #ff8400;
+    transition: all 0.5s;
+}
+
+.somnath_header .container .inside_header .navbar ul li::before {
+    right: 0;
+    top: 0;
+
+}
+
+.somnath_header .container .inside_header .navbar ul li::after {
+    left: 0;
+    bottom: 0;
+
+}
+
+.somnath_header .container .inside_header .navbar ul li:hover::before,
+.somnath_header .container .inside_header .navbar ul li:hover::after {
+    width: 80%;
+
+}
+
+.somnath_header .container .inside_header .contact_btn {
+    width: 170px;
+    height: 50px;
+    border: 1px #ff8400 solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    transition: 0.3s all ease;
+}
+
+.somnath_header .container .inside_header .contact_btn p {
+    color: #ff8400;
+    font-weight: 600;
+    font-size: 17px;
+    z-index: 999;
+    margin: 0;
+
+}
+
+.somnath_header .container .inside_header .contact_btn:hover p {
+    color: #ffffff;
+    transition: 0.3s all ease;
+
+}
+
+.somnath_header .container .inside_header a .contact_btn::before {
+    width: 0;
+    content: '';
+    margin: auto;
+    height: 100%;
+    background-color: #ff8400;
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    left: 50%;
+}
+
+.somnath_header .container .inside_header a .contact_btn:hover::before {
+    width: 100%;
+    left: 0%;
+}
+
+.banner {
+    width: 100%;
+    height: 800px;
+    background-color: #FFF3EA;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.banner .left_side_texts {
+    width: 52%;
+    height: 656px;
+    margin-left: 50px;
+}
+
+.banner .left_side_texts .small_slogan {
+    width: auto;
+    height: 60px;
+
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.banner .left_side_texts .big_slogan {
+    width: auto;
+    height: auto;
+
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 80px;
+    overflow: hidden;
+}
+
+.banner .left_side_texts .big_slogan .typing {
+    border-right: 3px solid #ff8400;
+    padding-right: 2px;
+    animation: blink 0.8s infinite;
+    color: #ff8400;
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.banner .left_side_texts .para {
+    width: auto;
+    height: auto;
+    margin-top: 35px;
+    line-height: 1.7em;
+    font-size: 16px;
+    color: #606060;
+}
+
+.banner .left_side_texts .find_me_text {
+    width: auto;
+    height: auto;
+    margin-top: 80px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+
+.banner .left_side_texts .link_icons {
+    width: 240px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+}
+
+.banner .left_side_texts .link_icons .icons_1 {
+    width: 50px;
+    height: 50px;
+    background-color: #ff8400;
+    list-style: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner .left_side_texts .link_icons .icons_1:hover {
+    background-color: #fff;
+
+}
+
+.banner .left_side_texts .link_icons .icons_1 a {
+    text-decoration: none;
+    color: #fff;
+
+    font-size: 19px;
+}
+
+.banner .left_side_texts .link_icons .icons_1::before {
+    position: absolute;
+    right: -10px;
+    top: 0;
+
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #ff8400;
+    transition: .5s;
+}
+
+.banner .left_side_texts .link_icons .icons_1:hover::before {
+    width: 100%;
+}
+
+.banner .left_side_texts .link_icons .icons_1::after {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    content: '';
+    width: 2px;
+
+    height: 0px;
+    background-color: #ff8400;
+    transition: .5s;
+}
+
+.banner .left_side_texts .link_icons .icons_1:hover::after {
+    height: 100%;
+
+}
+
+.banner .left_side_texts .link_icons .icons_1:hover a {
+    color: #ff8400;
+
+    transition: 0.4s all ease;
+}
+
+.banner .right_side_images {
+    width: 39%;
+    height: 656px;
+    background: url(../images/homeBannerFourBg.png) center 120px / 135% 100% no-repeat;
+    background-position: center 120px;
+
+}
+
+.banner .right_side_images .owner_image_box {
+    width: 100%;
+
+    height: 100%;
+    margin-bottom: 50px;
+    border: #000;
+}
+
+.banner .right_side_images .owner_image_box .owner_image {
+    width: 100%;
+
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner .right_side_images .experience {
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 430px;
+    right: 0;
+    animation: moveUpDown 6s ease-in-out infinite alternate;
+}
+
+.banner .right_side_images .award {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 350px;
+    right: 550px;
+    animation: moveUpDown 6s ease-in-out infinite alternate;
+    border-radius: 10px;
+}
+
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.banner .right_side_images .contact_svg {
+    position: absolute;
+    bottom: 160px;
+    right: 680px;
+    text-decoration: none;
+}
+
+.animate-spin {
+    transform-origin: center;
+    -webkit-animation: animateSpin 7s linear infinite;
+    animation: animateSpin 7s linear infinite;
+}
+
+@-webkit-keyframes animateSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mouse {
+    cursor: pointer;
+    width: 50px;
+    height: 80px;
+    border: 3px solid #ffcc96;
+    border-radius: 60px;
+    position: relative;
+    bottom: 70px;
+    right: 200px;
+    animation: moveUpDown 2s infinite alternate;
+    position: relative;
+
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.mouse::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6600;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: wheel 2s infinite;
+}
+
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 60px;
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 60px;
+    }
+}
+
+.somnath_about {
+    width: 100%;
+    height: auto;
+}
+
+.somnath_about .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.somnath_about .container .left_side_about_images {
+    width: 38%;
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.somnath_about .container .left_side_about_images .about_image_box {
+    width: 400px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #ffbf7b 1px solid;
+    border-radius: 5px;
+    transform: skewy(-10deg);
+
+}
+
+.somnath_about .container .left_side_about_images .about_image_box .inside_bg {
+    width: 370px;
+    height: 420px;
+    background-color: #ffbd77;
+    border-radius: 5px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.somnath_about .container .left_side_about_images .about_image_box .inside_bg .inside_image {
+    width: 370px;
+    height: 458px;
+    object-fit: contain;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    transform: skewy(10deg);
+    top:30px;
+}
+
+.somnath_about .container .left_side_about_images .about_image_box .inside_bg .inside_image .image_about {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.somnath_about .container .left_side_about_images .rotate-360 {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    animation-name: rotate360;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.somnath_about .container .left_side_about_texts {
+    width: 55%;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+}
+
+.somnath_about .container .left_side_about_texts .sub-heading {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.somnath_about .container .left_side_about_texts .sub-heading::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ff914d;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.somnath_about .container .left_side_about_texts .main-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.somnath_about .container .left_side_about_texts .description-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience {
+    width: 330px;
+    height: auto;
+}
+
+
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    position: relative;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-button:hover {
+    color: #1f2937;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-button.active {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #f97316;
+    border-radius: 9999px;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .tab-content.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .content-section {
+    margin-bottom: 1.5rem;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .content-section h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f97316;
+    margin-bottom: 0.25rem;
+}
+
+.somnath_about .container .left_side_about_texts .clicking_experience .content-section p {
+    color: #374151;
+}
+
+.somnath_service {
+    width: 100%;
+    height: auto;
+    /* background-color: #f3f4f6; */
+    /* padding: 50px 0; */
+}
+
+.somnath_service .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.somnath_service .container .service_heading {
+    font-size: 39px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.somnath_service .container .all_services {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.somnath_service .container .all_services .service {
+    width: 280px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    transition: 0.3s all ease;
+    border: 1px solid #ffd09d88;
+}
+
+.somnath_service .container .all_services .service:hover {
+    background-color: #FFF5EF;
+    transition: 0.6s all ease;
+}
+
+.somnath_service .container .all_services .service .image_service {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.somnath_service .container .all_services .service .service_name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.somnath_service .container .all_services .service .service_para {
+    font-size: 16px;
+    color: #4b5563;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.somnath_service_counter {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.somnath_service_counter .container {
+    width: 100%;
+    height: 200px;
+    background-color: #fff3ea;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.somnath_service_counter .container .counter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.somnath_service_counter .container .counter .counter_box {
+    width: 320px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid #ffd09d88;
+}
+
+.somnath_service_counter .container .counter .counter_box .counter_number {
+    font-size: 40px;
+    font-weight: 600;
+    color: #ff8400;
+    /* margin-bottom: 10px; */
+}
+
+.somnath_service_counter .container .counter .counter_box .counter_text {
+    font-size: 18px;
+    color: #4b5563;
+}
+
+.somnath_service_counter .container .counter .counter_box .counter_text span {
+    font-weight: 600;
+    color: #ff8400;
+}
+
+.somnath_service_counter .container .counter .counter_box .counter_text p span {
+    font-weight: 600;
+    color: #ff8400;
+}
+
+.somnath_all_designs {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.somnath_all_designs .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.somnath_all_designs .container .design_heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.somnath_all_designs .container .all_designs_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.somnath_all_designs .container .all_designs_box .design_box {
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    transition: 0.3s all ease;
+    border: 1px solid #ffd09d88;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+    overflow: hidden;
+}
+
+.somnath_all_designs .container .all_designs_box .design_box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.somnath_all_designs .container .all_designs_box .design_box:hover::before {
+    height: 100%;
+    transition: 0.5s ease-in-out;
+
+}
+
+.somnath_all_designs .container .all_designs_box .design_box .design_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.somnath_all_designs .container .all_designs_box .design_box .design_text {
+    width: 290px;
+    height: 120px;
+    background-color: #ff8400;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+    top: 300px;
+    position: absolute;
+    /* display: none; */
+    transition: 0.3s all ease;
+    overflow: hidden;
+
+}
+.somnath_all_designs .container .all_designs_box .design_box:hover .design_text {
+    transition: 0.3s all ease;
+    /* display: block; */
+    opacity: 1;
+    top: 150px;
+}
+.somnath_all_designs .container .all_designs_box .design_box .design_text h4 {
+    font-size: 15px;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.somnath_all_designs .container .all_designs_box .design_box .design_text p {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+.somnath_all_designs .container .all_designs_box .design_box .design_text p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s all ease;
+}
+
+.somnath_all_designs .container .all_designs_box .design_box .design_text p a:hover {
+    color: #ffbd77;
+    transition: 0.3s all ease;
+}
+
+
+
+.somnath_email_send {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.somnath_email_send .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.somnath_email_send .container .email_send_all {
+    width: 85%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #fff3ea;
+    border-radius: 10px;
+}
+
+.somnath_email_send .container .email_send_all .email_send_text {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.somnath_email_send .container .email_send_all .email_send_text .subscribe_text {
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 0 rgba(8, 8, 8, 0.4), -1px -1px 0 rgba(8, 8, 8, 0.4), 1px -1px 0 rgba(8, 8, 8, 0.4), -1px 1px 0 rgba(8, 8, 8, 0.4), 1px 1px 0 rgba(8, 8, 8, 0.4);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.somnath_email_send .container .email_send_all .email_send_text .email_send_heading {
+    font-size: 48px;
+    font-weight: 600;
+    color: #ff8400;
+}
+
+.somnath_email_send .container .email_send_all .email_send_text .email_send_sub_heading {
+    font-size: 16px;
+    color: #4b5563;
+}
+
+.somnath_email_send .container .email_send_all .email_send_form {
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.somnath_email_send .container .email_send_all .email_send_form .email_input {
+    width: 400px;
+    height: 50px;
+    border: 1px solid #ffc78c;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.somnath_email_send .container .email_send_all .email_send_form .email_input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 132, 0, 0.2);
+    transition: 0.3s all ease;
+
+}
+
+.somnath_email_send .container .email_send_all .email_send_form .email_submit {
+    width: 400px;
+    height: 50px;
+    background-color: #ff8400;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    margin-top: 20px;
+}
+
+.somnath_email_send .container .email_send_all .email_send_form .email_submit:hover {
+    background-color: #ff6600;
+    transition: 0.3s all ease;
+}
+.somnath_testimonial{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-color: #000;
+}
+.somnath_testimonial .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.somnath_testimonial .container .testimonial_heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.somnath_testimonial .container .testimonial_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.somnath_testimonial .container .testimonial_box .testimonial_text {
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    transition: 0.3s all ease;
+    border: 4px solid #ff8400;
+}
+.somnath_testimonial .container .testimonial_box .testimonial_text:hover {
+    background-color: #ffe9db;
+    transition: 0.6s all ease;
+}
+.somnath_testimonial .container .testimonial_box .testimonial_text p{
+    font-size: 16px;
+    color: #4b5563;
+    text-align: center;
+    line-height: 1.5;
+}
+.somnath_testimonial .container .testimonial_box .testimonial_text h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 10px;
+}
+.somnath_contact{
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+}
+.somnath_contact .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.somnath_contact .container .contact_heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 60px;
+}
+.somnath_contact .container .full_contact{
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.somnath_contact .container .full_contact .contact_form {
+    width: 65%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.somnath_contact .container .full_contact .contact_form .input_field{
+    width: 400px;
+    height: 50px;
+    border: 1px solid #ffc78c;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.somnath_contact .container .full_contact .contact_form .input_field:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 132, 0, 0.2);
+    transition: 0.3s all ease;
+}
+.somnath_contact .container .full_contact .contact_form .textarea_field {
+    width: 805px;
+    height: 150px;
+    border: 1px solid #ffc78c;
+    border-radius: 5px;
+    padding: 20px 10px;
+    font-size: 16px;
+    color: #000;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.somnath_contact .container .full_contact .contact_form .textarea_field:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 132, 0, 0.2);
+    transition: 0.3s all ease;
+}
+.somnath_contact .container .full_contact .contact_form .submit_button {
+    width: 250px;
+    height: 50px;
+    background-color: #ff8400;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.somnath_contact .container .full_contact .contact_form .submit_button:hover {
+    background-color: #ff6600;
+    transition: 0.3s all ease;
+}
+.somnath_contact .container .full_contact .contact_info {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    /* justify-content:center; */
+    flex-direction: column;
+    /* margin-bottom: 100px; */
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box{
+    width: 100%;
+    height:auto;
+    border-radius: 10px;
+    margin-bottom: 55px; 
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* border: 1px solid #ffd09d88; */
+    /* margin: 22px; */
+    /* margin: 10px; */
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .icons{
+    width: 60px;
+    height: 60px;
+    background-color: #ffecd7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .icons i{
+    font-size: 19px;
+    color: #ff8400;
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .info_all_text{
+    width:auto;
+    height: 60px;
+    /* border: 1px solid #ffd09d88; */
+    margin-left: 10px;
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .info_all_text .info_heading{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    /* padding:5px; */
+    margin: 0;
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .info_all_text .info_text{
+    font-size: 16px;
+    color: #4b5563;
+    /* padding:5px; */
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .info_all_text .info_text a{
+    text-decoration: none;
+    color: #2c323b;
+    /* font-weight: 600; */
+    transition: 0.3s all ease;
+}
+.somnath_contact .container .full_contact .contact_info .contact_info_box .info_all_text .info_text a:hover{
+    color: #ff8400;
+    transition: 0.3s all ease;
+}
+.somnath_footer .footer{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.somnath_footer .footer a{
+    text-decoration: none;
+}
+.somnath_footer .footer .logo-name {
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.somnath_footer .footer .logo-name .circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    transform: skewy(-10deg);
+    background-color: #ff8400;
+    position: absolute;
+}
+.somnath_footer .footer .logo-name .name {
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 999;
+    padding-left: 10px;
+    color: #fff;
+}
+.somnath_footer .footer .footer_text{
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 17px;
+}
+.somnath_footer .footer .app_links{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.somnath_footer .footer .app_links a{
+    text-decoration: none;
+}
+.somnath_footer .footer .linking_icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    border: 2px solid #1d1e1f;
+    border-radius: 4px;
+    transition: 0.3s all ease;
+}
+.somnath_footer .footer .linking_icon:hover{
+    background-color: #ff8400;
+    transition: 0.3s all ease;
+}
+.somnath_footer .footer .linking_icon i{
+    color: #fff;
+    font-size: 14px;
+}
